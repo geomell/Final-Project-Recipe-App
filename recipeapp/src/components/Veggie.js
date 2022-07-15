@@ -1,37 +1,37 @@
 import { useEffect, useState } from "react";
-import "./Popular.css"
+import "./Veggie.css"
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
-function Popular() {
+function Veggie() {
 
-  const [popular, setPopular] = useState ([]);
+  const [vegetarian, setVegetarian] = useState ([]);
 
   useEffect (()=> {
-    getPopular();
+    getVegetarian();
   },[]);
 
-  const getPopular= async () => {
+  const getVegetarian= async () => {
 
-    const check = localStorage.getItem('popular');
+    const check = localStorage.getItem('vegetarian');
 
     if (check) {
-      setPopular(JSON.parse(check));
+      setVegetarian(JSON.parse(check));
     }else {
       const api= await fetch (
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API}&number=9`);
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API}&number=9&tags=vegetarian`);
       const data= await api.json();
 
-      localStorage.setItem('popular', JSON.stringify(data.recipes))
-      setPopular (data.recipes);
+      localStorage.setItem('vegetarian', JSON.stringify(data.recipes))
+      setVegetarian (data.recipes);
     }
   };
 
   return (
     <div>      
         <div className="wrapper">
-            <h3>Popular Recipes</h3>
+            <h3>Vegetarian Recipes</h3>
             <Splide options={{
               perPage: 3, 
               arrows: false,
@@ -39,7 +39,7 @@ function Popular() {
               drag: 'free',
               gap: '2rem',
             }}>
-            {popular.map((recipe)=> {
+            {vegetarian.map((recipe)=> {
               return (
                 <SplideSlide key={recipe.id}>
                 <div class="Card">
@@ -66,4 +66,4 @@ const Gradient = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
 
-export default Popular
+export default Veggie

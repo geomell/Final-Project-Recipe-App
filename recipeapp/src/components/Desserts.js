@@ -1,37 +1,37 @@
 import { useEffect, useState } from "react";
-import "./Popular.css"
+import "./Desserts.css"
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 
-function Popular() {
+function Desserts() {
 
-  const [popular, setPopular] = useState ([]);
+  const [dessert, setDessert] = useState ([]);
 
   useEffect (()=> {
-    getPopular();
+    getDessert();
   },[]);
 
-  const getPopular= async () => {
+  const getDessert= async () => {
 
-    const check = localStorage.getItem('popular');
+    const check = localStorage.getItem('dessert');
 
     if (check) {
-      setPopular(JSON.parse(check));
+      setDessert(JSON.parse(check));
     }else {
       const api= await fetch (
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API}&number=9`);
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API}&number=9&tags=dessert`);
       const data= await api.json();
 
-      localStorage.setItem('popular', JSON.stringify(data.recipes))
-      setPopular (data.recipes);
+      localStorage.setItem('dessert', JSON.stringify(data.recipes))
+      setDessert (data.recipes);
     }
   };
 
   return (
     <div>      
         <div className="wrapper">
-            <h3>Popular Recipes</h3>
+            <h3>Dessert Recipes</h3>
             <Splide options={{
               perPage: 3, 
               arrows: false,
@@ -39,7 +39,7 @@ function Popular() {
               drag: 'free',
               gap: '2rem',
             }}>
-            {popular.map((recipe)=> {
+            {dessert.map((recipe)=> {
               return (
                 <SplideSlide key={recipe.id}>
                 <div class="Card">
@@ -66,4 +66,4 @@ const Gradient = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
 
-export default Popular
+export default Desserts
