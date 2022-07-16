@@ -33,7 +33,7 @@ function Popular() {
         <div className="wrapper">
             <h3>Popular Recipes</h3>
             <Splide options={{
-              perPage: 3, 
+              perPage: 2, 
               arrows: false,
               pagination: false,
               drag: 'free',
