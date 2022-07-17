@@ -3,14 +3,17 @@ import "./Search.css"
 import styled from 'styled-components';
 import {useState} from 'react';
 import {TiDeleteOutline} from 'react-icons/ti';
-import {FaSearch} from 'react-icons/fa'
+import {FaSearch} from 'react-icons/fa';
+import {useNavigate} from 'react-router-dom';
 
 function Search() {
 
     const [input, SetInput] =useState("");
+    const navigate= useNavigate ();
 
     const submitHandler = (e) =>{
         e.preventDefault();
+        navigate('/searched/'+input);
     };
 
   return (
