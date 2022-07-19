@@ -44,9 +44,11 @@ function Veggie() {
               return (
                 <SplideSlide key={recipe.id}>
                 <div class="Card">
+                <Link to={'/recipe/'+recipe.id}>
                   <p> {recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
+                  </Link>
                 </div>
                 </SplideSlide>
               );
