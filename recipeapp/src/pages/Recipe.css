@@ -1,12 +1,9 @@
 .wrapperRecipe {
-    margin-top: 10rem;
+    margin-top: 2rem;
     margin-bottom: 5rem;
     display: flex;
 }
-button:active {
-    background: linear-gradient(35deg, #494949, #313131);
-    color: white;
-}
+
 
 .wrapperRecipe h2 {
     margin-bottom: 2rem;
@@ -14,7 +11,8 @@ button:active {
 }
 
 .information {
-    margin-left: 10rem;
+    margin-left: 5rem;
+    margin-top: 6rem;
 }
 
 
@@ -26,6 +24,11 @@ button:active {
     margin-right: 2rem;
     font-weight: 600;
     cursor: pointer;
+}
+
+button:active {
+    background: linear-gradient(35deg, #494949, #313131);
+    color: white;
 }
 
 .wrapperRecipe li {
