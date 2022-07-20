@@ -1,33 +1,42 @@
 import styled from "styled-components";
-import "./Category.css"
-import {NavLink} from 'react-router-dom';
-import {FaPizzaSlice, FaHamburger} from 'react-icons/fa';
-import {GiNoodles, GiChopsticks} from 'react-icons/gi';
-
-
+import { NavLink } from "react-router-dom";
+import './Category.css'
 
 function Category() {
   return (
-    <div className="list">
-        <SLink to={'/cuisine/Italian'}>
-            <FaPizzaSlice />
-            <h4>Italian</h4>
-        </SLink>
-        <SLink to={'/cuisine/American'}>
-            <FaHamburger />
-            <h4>American</h4>
-        </SLink>
-        <SLink to={'/cuisine/Thai'}>
-            <GiNoodles />
-            <h4>Thai</h4>
-        </SLink>
-        <SLink to={'/cuisine/Vietnamese'}>
-            <GiChopsticks />
-            <h4>Vietnamese</h4>
-        </SLink>
+    <div>
+
+    <h2>Recipes from around the world:</h2>
+    <div className='list'>
+      <SLink className='shadow' to="/cuisine/African">
+        <h4>African</h4>
+      </SLink>
+      <SLink className='shadow' to="/cuisine/American">
+        <h4>American</h4>
+      </SLink>
+      <SLink className='shadow' to="/cuisine/French">
+        <h4>French</h4>
+      </SLink>
+      <SLink className='shadow' to="/cuisine/Indian">
+       <h4>Indian</h4>
+      </SLink>
+      <SLink className='shadow' to="/cuisine/Italian">
+        <h4>Italian</h4>
+      </SLink>
+      <SLink className='shadow' to="/cuisine/Spanish">
+        <h4>Spanish</h4>
+      </SLink>
+      <SLink className='shadow' to="/cuisine/Thai">
+        <h4>Thai</h4>
+      </SLink>
+      <SLink className='shadow' to="/cuisine/Vietnamese">
+       <h4>Japanese</h4>
+      </SLink>
     </div>
-  )
+    </div>
+  );
 }
+
 
 
 const SLink = styled(NavLink)`
@@ -35,27 +44,29 @@ const SLink = styled(NavLink)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  margin-right: 2rem;
+  border-radius: 20px;
+  margin-right: 1rem;
   text-decoration: none;
-  background: linear-gradient(35deg, #494949, #313131);
-  width: 5rem;
-  height: 5rem;
+  background: #eacda3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 6rem;
+  height: 4rem;
   cursor: pointer;
   transform: scale(0.8);
 
   h4 {
-    color: white;
-    font-size: 0.8rem;
+    color: black;
+    font-size: 1rem;
   }
-
-    svg {
+  svg {
     color: white;
     font-size: 1.5rem;
   }
-
   &.active {
-    background: linear-gradient(to right, #f27121, #e94057);
+    background: #ec008c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     svg {
       color: white;
     }
@@ -63,7 +74,6 @@ const SLink = styled(NavLink)`
       color: white;
     }
   }
-
   @media (max-width: 768px) {
     margin: 0.5rem 0;
     width: 4rem;

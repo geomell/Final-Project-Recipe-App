@@ -12,7 +12,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin:0% 10%;
+  margin:0% 0%;
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../image1.jpg);
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  
 }
 
 code {
@@ -26,8 +30,8 @@ h4 {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: black;
   line-height: 2.5rem;
-  margin: 2rem 0rem;
+  margin: 1rem 0rem;
 }

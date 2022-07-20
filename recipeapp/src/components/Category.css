@@ -3,3 +3,13 @@
     justify-content: center;
     margin: 2rem 0rem;
 }
+
+h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.shadow:hover {
+    box-shadow: 2px 2px 2px 2px #eacb9f;
+}
