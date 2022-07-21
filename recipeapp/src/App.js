@@ -13,8 +13,8 @@ function App() {
       <Nav>
         <GiKnifeFork />
         <Logo to={'/'}> Recipe App </Logo>
+        <Search className='left'/>
       </Nav>
-      <Search />
       <Category />
       <Pages />
       </BrowserRouter>
@@ -31,7 +31,7 @@ const Logo = styled(Link)`
 `;
 
 const Nav = styled.div`
-  padding: 3rem 0;
+  
   display: flex;
   justify-content: flex-start;
   align-items: center;

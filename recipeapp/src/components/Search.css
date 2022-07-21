@@ -1,5 +1,5 @@
 form {
-    margin: 0rem 20rem;
+    margin: 0rem 5rem;
     
 }
 form div {
@@ -23,4 +23,8 @@ form div svg {
     left: 0%;
     transform: translate(100%, -50%);
     color: white;
+}
+
+.styling {
+    width: 1rem;
 }

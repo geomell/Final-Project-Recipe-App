@@ -19,7 +19,7 @@ function Search() {
   return (
     <form onSubmit={submitHandler}>
         <div>
-            <FaSearch> </FaSearch>
+            <FaSearch  color="white" className='styling'/> 
         <input onChange={(e)=>SetInput(e.target.value)}
         type="text" value={input}/>
         </div>
