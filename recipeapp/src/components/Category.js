@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import './Category.css'
+import '../components/css/Category.css'
 
 function Category() {
   return (

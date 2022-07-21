@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Popular.css"
+import "../components/css/Popular.css"
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";

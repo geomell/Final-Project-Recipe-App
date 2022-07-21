@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Veggie.css"
+import "../components/css/Veggie.css"
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
