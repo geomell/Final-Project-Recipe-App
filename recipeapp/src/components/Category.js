@@ -4,8 +4,7 @@ import './Category.css'
 
 function Category() {
   return (
-    <div>
-
+    <div className="line">
     <h2>Recipes from around the world:</h2>
     <div className='list'>
       <SLink className='shadow' to="/cuisine/African">
@@ -45,18 +44,17 @@ const SLink = styled(NavLink)`
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   text-decoration: none;
-  background: #eacda3;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: rgba(0,0,0,0.2);
+  border: 2px solid black;
   width: 6rem;
   height: 4rem;
   cursor: pointer;
   transform: scale(0.8);
 
   h4 {
-    color: black;
+    color: pink;
     font-size: 1rem;
   }
   svg {

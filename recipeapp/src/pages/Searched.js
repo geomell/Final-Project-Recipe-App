@@ -9,14 +9,22 @@ function Searched() {
 
     const [searchedRecipes, setSearchedRecipes]= useState ([]);
     let params = useParams ();
+
+    const noRecipes = searchedRecipes.status || searchedRecipes.message;
     
     const getSearched = async (name) => {
         const data = await fetch (
             `https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API}&number=20&query=${name}`);
         const recipes = await data.json();
+        if (recipes.status === 404) {
+            setSearchedRecipes([]);
+            return;
+        }
         setSearchedRecipes (recipes.results);
         
     };
+
+   
 
     useEffect(()=> {
         getSearched(params.search);
@@ -24,7 +32,7 @@ function Searched() {
 
   return (
     <div className='grid'>
-        {searchedRecipes.map((item)=>{
+        {!noRecipes ? (searchedRecipes.map((item)=>{
             return (
                 <div className='card' key={item.id}>
                     <Link to={'/recipe/'+item.id}>
@@ -34,7 +42,9 @@ function Searched() {
                 </div>
             )
 
-        })}
+        })):(
+            <h1>Recipes not found.</h1> 
+        )}
     </div>
   )
 }

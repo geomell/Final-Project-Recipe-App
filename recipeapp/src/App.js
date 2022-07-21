@@ -16,6 +16,7 @@ function App() {
       <Nav>
         <GiKnifeFork />
         <Logo to={'/'}> Recipe App </Logo>
+        <GiKnifeFork />
         <Search className='left'/>
       </Nav>
       <Category />
@@ -28,10 +29,11 @@ function App() {
 
 const Logo = styled(Link)`
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.7rem;
+  color: pink;
+  font-weight: 600;
   font-family: "Consolas", sans-serif;
-  padding-left: 1rem;
+  padding: 0rem 0.5rem;
 `;
 
 const Nav = styled.div`
@@ -40,7 +42,7 @@ const Nav = styled.div`
   justify-content: flex-start;
   align-items: center;
   svg {
-    color: var(--gray-600);
+    color: pink;
     font-size: 2rem;
   }
 `;

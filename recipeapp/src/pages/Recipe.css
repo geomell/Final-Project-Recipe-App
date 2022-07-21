@@ -4,17 +4,14 @@
     display: flex;
 }
 
-
 .wrapperRecipe h2 {
     margin-bottom: 2rem;
-
 }
 
 .information {
-    margin-left: 5rem;
+    margin-left: 3rem;
     margin-top: 6rem;
 }
-
 
  button {
     padding:1rem 2rem;
@@ -30,16 +27,34 @@ button:active {
     background: linear-gradient(35deg, #494949, #313131);
     color: white;
 }
+button:focus {
+    background: linear-gradient(35deg, #494949, #313131);
+    color: white;
+}
 
 .wrapperRecipe li {
     font-size: 1.2rem;
     line-height: 2.5rem;
-
 }
 
 .wrapperRecipe ul {
     margin-top: 2rem;
 }
 
-
+@media screen and (max-width:1150px) {
+    button {
+        padding:1rem 1rem;
+        margin-right: 0.5rem;
+    }
+    .information {
+        margin-left: 1rem;
+    }
+    .title {
+        width: 70%;
+    }
+    .title img {
+        width: 25rem;
+    }
+    
+}
 

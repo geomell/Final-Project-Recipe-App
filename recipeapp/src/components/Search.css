@@ -1,5 +1,6 @@
 form {
-    margin: 0rem 5rem;
+    margin-left: 10rem;
+    width: 50%;
     
 }
 form div {
@@ -8,9 +9,9 @@ form div {
 }
 form div input {
     border: none;
-    background: #eacda3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 1;
+    background-color: inherit;
+    border: 2px solid black;
     font-size: 1.5rem;
     color: black;
     padding: 1rem 3rem;
@@ -18,6 +19,12 @@ form div input {
     outline: none;
    width: 100%;
 }
+
+form div input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    font-size: 1.4rem;
+    opacity: 1; /* Firefox */
+  }
 
 
 
