@@ -8,14 +8,19 @@ form div {
 }
 form div input {
     border: none;
-    background: linear-gradient(35deg, #494949, #313131);
+    background: #eacda3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-size: 1.5rem;
-    color: white;
+    color: black;
     padding: 1rem 3rem;
     border-radius: 1rem;
     outline: none;
    width: 100%;
 }
+
+
+
 
 form div svg {
     position: absolute;

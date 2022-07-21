@@ -1,8 +1,6 @@
 import React from 'react';
 import "./Search.css"
-import styled from 'styled-components';
 import {useState} from 'react';
-import {TiDeleteOutline} from 'react-icons/ti';
 import {FaSearch} from 'react-icons/fa';
 import {useNavigate} from 'react-router-dom';
 
@@ -21,7 +19,7 @@ function Search() {
         <div>
             <FaSearch  color="white" className='styling'/> 
         <input onChange={(e)=>SetInput(e.target.value)}
-        type="text" value={input}/>
+        type="text" placeholder='Search for an ingredient...' value={input}/>
         </div>
         
     </form>
