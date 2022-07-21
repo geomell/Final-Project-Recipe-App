@@ -43,7 +43,7 @@ function Recipe() {
         </div>
         )}
         {activeTab === 'ingredients' && (
-          <ul>
+          <ul >
           {details.extendedIngredients.map ((ingredient)=> 
           <li key={ingredient.id}>{ingredient.original}</li>)}
         </ul>

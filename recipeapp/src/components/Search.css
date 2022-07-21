@@ -40,3 +40,18 @@ form div svg {
 .styling {
     width: 1rem;
 }
+
+
+@media screen and (max-width:830px) {
+    form {
+        margin-left: 5rem;
+        width: 47%;
+        
+    }
+    form div input {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+       
+    }
+    
+}

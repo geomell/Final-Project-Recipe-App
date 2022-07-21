@@ -16,5 +16,18 @@ h2 {
 }
 
 .shadow:hover {
-    box-shadow: 2px 2px 2px 2px #eacb9f;
+    box-shadow: 2px 2px 2px 2px pink;
 }
+@media screen and (max-width:670px) {
+    .list .hide{
+        display: none;
+    }
+    
+   
+}
+
+
+
+
+
+

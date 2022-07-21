@@ -34,6 +34,9 @@ const Logo = styled(Link)`
   font-weight: 600;
   font-family: "Consolas", sans-serif;
   padding: 0rem 0.5rem;
+  @media (max-width :830px) {
+    font-size:1.2rem;
+  }
 `;
 
 const Nav = styled.div`
@@ -45,6 +48,13 @@ const Nav = styled.div`
     color: pink;
     font-size: 2rem;
   }
+  @media (max-width :830px) {
+    svg{
+      font-size: 1.5rem;
+    }
+    
+  }
+
 `;
 
 export default App;

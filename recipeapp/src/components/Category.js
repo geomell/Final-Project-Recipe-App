@@ -7,10 +7,10 @@ function Category() {
     <div className="line">
     <h2>Recipes from around the world:</h2>
     <div className='list'>
-      <SLink className='shadow' to="/cuisine/African">
+      <SLink className='shadow hide'  to="/cuisine/African">
         <h4>African</h4>
       </SLink>
-      <SLink className='shadow' to="/cuisine/American">
+      <SLink className='shadow hide' to="/cuisine/American">
         <h4>American</h4>
       </SLink>
       <SLink className='shadow' to="/cuisine/French">
@@ -52,7 +52,6 @@ const SLink = styled(NavLink)`
   height: 4rem;
   cursor: pointer;
   transform: scale(0.8);
-
   h4 {
     color: pink;
     font-size: 1rem;
@@ -73,12 +72,13 @@ const SLink = styled(NavLink)`
     }
   }
   @media (max-width: 768px) {
-    margin: 0.5rem 0;
-    width: 4rem;
-    height: 4rem;
-    h4 {
-      font-size: 0.5rem;
+    display:none
+    margin-right: 0.1rem;
+    height: 3rem;
+    svg {
+      font-size: 1.2rem;
     }
+    
   }
 `;
 export default Category
