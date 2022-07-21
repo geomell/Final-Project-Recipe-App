@@ -5,7 +5,7 @@ import {BrowserRouter} from "react-router-dom"
 import Search from "./components/Search";
 import styled from "styled-components";
 import {Link} from 'react-router-dom';
-import {GiKnifeFork} from 'react-icons/gi'
+import {GiKnifeFork, GiSpoon} from 'react-icons/gi'
 
 
 
@@ -14,7 +14,7 @@ function App() {
        <div className="App" >
       <BrowserRouter>
       <Nav>
-        <GiKnifeFork />
+        <GiSpoon />
         <Logo to={'/'}> Recipe App </Logo>
         <GiKnifeFork />
         <Search className='left'/>
@@ -37,6 +37,9 @@ const Logo = styled(Link)`
   @media (max-width :830px) {
     font-size:1.2rem;
   }
+  @media (max-width :510px) {
+    font-size:0.8rem;
+  }
 `;
 
 const Nav = styled.div`
@@ -51,6 +54,9 @@ const Nav = styled.div`
   @media (max-width :830px) {
     svg{
       font-size: 1.5rem;
+    }
+    @media (max-width :510px) {
+      font-size:0.6rem;
     }
     
   }

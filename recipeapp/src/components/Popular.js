@@ -39,7 +39,6 @@ function Popular() {
               pagination: false,
               drag: 'free',
               gap: '2rem',
-              
             }}>
             {popular.map((recipe)=> {
               return (

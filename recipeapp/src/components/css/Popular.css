@@ -4,8 +4,15 @@
 }
 
 
+
+.wrapper h3 {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+
 .Card {
-    min-height: 17rem;
+    min-height: 19rem;
     border-radius: 2rem;
     overflow:hidden;
     position: relative;

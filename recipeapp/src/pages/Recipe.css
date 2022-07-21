@@ -75,5 +75,37 @@ button:focus {
    
 }
 
+@media screen and (max-width:698px) {
+    .wrapperRecipe {
+        margin-top: 1rem;
+    }
+    button {
+        padding:1rem 0.2rem;
+        margin-right: 0.2rem;
+    }
+    .title {
+        width: 100%;
+    }
+    .title img {
+        width: 31rem;
+    }
+    .information {
+        margin-top: 28rem;
+        margin-left: -28rem;
+    }
+}
+
+@media screen and (max-width:530px) {
+    .wrapperRecipe {
+        margin-top: 0.8rem;
+    }
+    .title img {
+        width: 28rem;
+    }
+    .information {
+        margin-top: 28rem;
+        margin-left: -26rem;
+    }
+}
 
 
