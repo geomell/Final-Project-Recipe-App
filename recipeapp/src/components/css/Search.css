@@ -18,10 +18,10 @@ form div input {
     padding: 1rem 3rem;
     border-radius: 1rem;
     outline: none;
-   width: 100%;
+    width: 90%;
 }
 
-form div input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+form div input::placeholder {     /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: black;
     font-size: 1.4rem;
     opacity: 1; /* Firefox */
@@ -35,8 +35,15 @@ form div svg {
     color: white;
 }
 
-.styling {
+.styling_search {
+    margin-left: -0.5rem;
     width: 1rem;
+}
+
+.styling_del {
+    width: 1.3rem;
+   margin-left: 0.5rem;
+   cursor: pointer;
 }
 
 @media screen and (max-width:830px) {

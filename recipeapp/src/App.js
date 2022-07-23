@@ -6,25 +6,16 @@ import Search from "./components/Search";
 import styled from "styled-components";
 import {Link} from 'react-router-dom';
 import {GiKnifeFork, GiSpoon} from 'react-icons/gi'
-import {useRef} from 'react';
 import Footer from "./components/Footer";
 
-
-
 function App() {
-
-  const ref = useRef(null);
-  const handleClick = () => {
-    //  clear input field value
-    ref.current.value = '';
-  };
 
   return (
     <div className="App" >
       <BrowserRouter>
         <Nav>
           <GiSpoon />
-          <Logo to={'/'}  onClick={handleClick}> 
+          <Logo to={'/'}  > 
           Tasty </Logo>
           <GiKnifeFork />
           <Search className='left'/>
