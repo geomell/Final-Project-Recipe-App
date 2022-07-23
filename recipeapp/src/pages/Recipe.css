@@ -17,7 +17,7 @@
     margin-top: 6rem;
 }
 
- button {
+button {
     padding:1rem 2rem;
     color: #313131;
     background: white;
@@ -32,6 +32,7 @@ button:active {
     background: rgb(174, 35, 174);
     color: white;
 }
+
 button:focus {
     background: purple;
     color: white;
@@ -60,8 +61,8 @@ button:focus {
     .title img {
         width: 25rem;
     }
-   
 }
+
 @media screen and (max-width:842px) {
     button {
         padding:1rem 0.5rem;
@@ -77,7 +78,6 @@ button:focus {
     .information {
         margin-left: 1.3rem;
     }
-   
 }
 
 @media screen and (max-width:698px) {

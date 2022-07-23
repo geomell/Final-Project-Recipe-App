@@ -22,43 +22,40 @@ function Desserts() {
     }else {
       const api= await fetch (
         `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API}&number=9&tags=dessert`);
-      const data= await api.json();
-
-      localStorage.setItem('dessert', JSON.stringify(data.recipes))
-      setDessert (data.recipes);
+        const data= await api.json();
+        localStorage.setItem('dessert', JSON.stringify(data.recipes))
+        setDessert (data.recipes);
     }
   };
 
   return (
     <div className="main">      
-        <div className="wrapper">
-            <h3>Dessert Recipes</h3>
-            <Splide options={{
-              perPage: 3,
-              type   : 'loop', 
-              rewind: true,
-              arrows: true,
-              pagination: true,
-              drag: 'free',
-              gap: '1rem',
-            }}>
-            {dessert.map((recipe)=> {
-              return (
-                <SplideSlide key={recipe.id}>
-                <div class="Card">
+      <div className="wrapper">
+        <h3>Dessert Recipes</h3>
+        <Splide options={{
+          perPage: 3,
+          type   : 'loop', 
+          rewind: true,
+          arrows: true,
+          pagination: true,
+          drag: 'free',
+          gap: '1rem',
+        }}>
+        {dessert.map((recipe)=> {
+          return (
+            <SplideSlide key={recipe.id}>
+              <div class="Card">
                 <Link to={'/recipe/'+recipe.id}>
                   <p> {recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
                   <Gradient />
-                  </Link>
-                </div>
-                </SplideSlide>
-              );
-            })}
-            </Splide>
-          </div>
-        
-      
+                </Link>
+              </div>
+            </SplideSlide>
+          );
+        })}
+        </Splide>
+      </div>
     </div>
   )
 }

@@ -8,7 +8,7 @@ function Cuisine() {
 
     const [cuisine, setCuisine] = useState([]);
 
-        let params = useParams();
+    let params = useParams();
 
     const getCuisine = async (name)=> {
         const data= await fetch (
@@ -21,20 +21,20 @@ function Cuisine() {
         getCuisine(params.type);
         //console.log(params.type);
       }, [params.type]);
-  return (
-    <div className='grid'>
-        {cuisine.map((item)=> {
-            return (
+
+    return (
+        <div className='grid'>
+            {cuisine.map((item)=> {
+                return (
                 <div className='card' key={item.id}>
                     <Link to={"/recipe/"+ item.id}>
-                    <img src={item.image} alt="" />
-                    <h4> {item.title}</h4>
+                        <img src={item.image} alt="" />
+                        <h4> {item.title}</h4>
                     </Link>
                 </div>
-            )
-        })}
-        
-    </div>
+                )
+            })}
+        </div>
   )
 }
 

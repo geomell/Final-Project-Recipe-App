@@ -5,38 +5,36 @@ import '../components/css/Category.css'
 function Category() {
   return (
     <div className="line">
-    <h2>Recipes from around the world:</h2>
-    <div className='list'>
-      <SLink className='shadow hide'  to="/cuisine/African">
-        <h4>African</h4>
-      </SLink>
-      <SLink className='shadow hide' to="/cuisine/American">
-        <h4>American</h4>
-      </SLink>
-      <SLink className='shadow' to="/cuisine/French">
-        <h4>French</h4>
-      </SLink>
-      <SLink className='shadow' to="/cuisine/Indian">
-       <h4>Indian</h4>
-      </SLink>
-      <SLink className='shadow' to="/cuisine/Italian">
-        <h4>Italian</h4>
-      </SLink>
-      <SLink className='shadow' to="/cuisine/Spanish">
-        <h4>Spanish</h4>
-      </SLink>
-      <SLink className='shadow' to="/cuisine/Thai">
-        <h4>Thai</h4>
-      </SLink>
-      <SLink className='shadow' to="/cuisine/Vietnamese">
-       <h4>Japanese</h4>
-      </SLink>
-    </div>
+      <h2>Recipes from around the world:</h2>
+      <div className='list'>
+        <SLink className='shadow hide'  to="/cuisine/African">
+          <h4>African</h4>
+        </SLink>
+        <SLink className='shadow hide' to="/cuisine/American">
+          <h4>American</h4>
+        </SLink>
+        <SLink className='shadow' to="/cuisine/French">
+          <h4>French</h4>
+        </SLink>
+        <SLink className='shadow' to="/cuisine/Indian">
+          <h4>Indian</h4>
+        </SLink>
+        <SLink className='shadow' to="/cuisine/Italian">
+          <h4>Italian</h4>
+        </SLink>
+        <SLink className='shadow' to="/cuisine/Spanish">
+          <h4>Spanish</h4>
+        </SLink>
+        <SLink className='shadow' to="/cuisine/Thai">
+          <h4>Thai</h4>
+        </SLink>
+        <SLink className='shadow' to="/cuisine/Vietnamese">
+          <h4>Japanese</h4>
+        </SLink>
+      </div>
     </div>
   );
 }
-
-
 
 const SLink = styled(NavLink)`
   display: flex;
@@ -61,10 +59,10 @@ const SLink = styled(NavLink)`
     font-size: 1.5rem;
   }
   &.active {
-    background: #ad5389;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+    background: #ad5389;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     svg {
       color: white;
     }
@@ -72,6 +70,7 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
       color: white;
     }
   }
+
   @media (max-width: 768px) {
     display:none
     margin-right: 0.1rem;
@@ -79,7 +78,7 @@ background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, F
     svg {
       font-size: 1.2rem;
     }
-    
   }
 `;
+
 export default Category

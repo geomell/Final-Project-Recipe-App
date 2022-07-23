@@ -22,43 +22,41 @@ function Veggie() {
     }else {
       const api= await fetch (
         `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API}&number=9&tags=vegetarian`);
-      const data= await api.json();
+        const data= await api.json();
 
-      localStorage.setItem('vegetarian', JSON.stringify(data.recipes))
-      setVegetarian (data.recipes);
+        localStorage.setItem('vegetarian', JSON.stringify(data.recipes))
+        setVegetarian (data.recipes);
     }
   };
 
   return (
     <div className="main">      
-        <div className="wrapper">
-            <h3>Vegetarian Recipes</h3>
-            <Splide options={{
-              perPage: 3,
-              type   : 'loop', 
-              rewind: true,
-              arrows: true,
-              pagination: true,
-              drag: 'free',
-              gap: '1rem',
-            }}>
-            {vegetarian.map((recipe)=> {
-              return (
-                <SplideSlide key={recipe.id}>
+      <div className="wrapper">
+        <h3>Vegetarian Recipes</h3>
+        <Splide options={{
+          perPage: 3,
+          type   : 'loop', 
+          rewind: true,
+          arrows: true,
+          pagination: true,
+          drag: 'free',
+          gap: '1rem',
+        }}>
+          {vegetarian.map((recipe)=> {
+            return (
+              <SplideSlide key={recipe.id}>
                 <div class="Card">
-                <Link to={'/recipe/'+recipe.id}>
-                  <p> {recipe.title}</p>
-                  <img src={recipe.image} alt={recipe.title} />
-                  <Gradient />
+                  <Link to={'/recipe/'+recipe.id}>
+                    <p> {recipe.title}</p>
+                    <img src={recipe.image} alt={recipe.title} />
+                    <Gradient />
                   </Link>
                 </div>
-                </SplideSlide>
-              );
-            })}
-            </Splide>
-          </div>
-        
-      
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+      </div>      
     </div>
   )
 }

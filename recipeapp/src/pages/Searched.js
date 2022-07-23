@@ -3,8 +3,6 @@ import "./Searched.css"
 import {useEffect, useState} from 'react';
 import {Link, useParams} from 'react-router-dom';
 
-
-
 function Searched() {
 
     const [searchedRecipes, setSearchedRecipes]= useState ([]);
@@ -21,31 +19,27 @@ function Searched() {
             return;
         }
         setSearchedRecipes (recipes.results);
-        
     };
-
-   
 
     useEffect(()=> {
         getSearched(params.search);
     },[params.search]);
 
-  return (
-    <div className='grid'>
-        {!noRecipes ? (searchedRecipes.map((item)=>{
-            return (
-                <div className='card' key={item.id}>
-                    <Link to={'/recipe/'+item.id}>
-                    <img src={item.image} alt={item.title} />
-                    <h4> {item.title}</h4>
-                    </Link>
-                </div>
+    return (
+        <div className='grid'>
+            {!noRecipes ? (searchedRecipes.map((item)=>{
+                return (
+                    <div className='card' key={item.id}>
+                        <Link to={'/recipe/'+item.id}>
+                            <img src={item.image} alt={item.title} />
+                            <h4> {item.title}</h4>
+                        </Link>
+                    </div>
             )
-
         })):(
             <h1>Recipes not found.</h1> 
         )}
-    </div>
+        </div>
   )
 }
 
