@@ -30,15 +30,17 @@ function Popular() {
   };
 
   return (
-    <div>      
+    <div className="main">      
         <div className="wrapper">
             <h3>Popular Recipes</h3>
             <Splide options={{
-              perPage: 2, 
-              arrows: false,
-              pagination: false,
+              perPage: 2,
+              type   : 'loop', 
+              rewind: true,
+              arrows: true,
+              pagination: true,
               drag: 'free',
-              gap: '2rem',
+              gap: '1rem',
             }}>
             {popular.map((recipe)=> {
               return (

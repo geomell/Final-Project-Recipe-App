@@ -30,15 +30,17 @@ function Veggie() {
   };
 
   return (
-    <div>      
+    <div className="main">      
         <div className="wrapper">
             <h3>Vegetarian Recipes</h3>
             <Splide options={{
-              perPage: 3, 
-              arrows: false,
-              pagination: false,
+              perPage: 3,
+              type   : 'loop', 
+              rewind: true,
+              arrows: true,
+              pagination: true,
               drag: 'free',
-              gap: '2rem',
+              gap: '1rem',
             }}>
             {vegetarian.map((recipe)=> {
               return (

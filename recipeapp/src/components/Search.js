@@ -15,11 +15,14 @@ function Search() {
     };
 
   return (
+
+    
+
     <form onSubmit={submitHandler}>
         <div>
             <FaSearch  color="white" className='styling'/> 
         <input onChange={(e)=>SetInput(e.target.value)}
-        type="text" placeholder='Search for an ingredient...' value={input}/>
+        type="text"  placeholder='Enter an ingredient...' value={input}/>
         </div>
         
     </form>

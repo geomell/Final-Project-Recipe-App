@@ -1,5 +1,7 @@
 .line {
-    border-bottom:  2px solid black;
+    border-bottom:  2px dotted black;
+    margin: 0% 1%;
+    
 }
 
 
@@ -16,7 +18,7 @@ h2 {
 }
 
 .shadow:hover {
-    box-shadow: 2px 2px 2px 2px pink;
+    box-shadow: 2px 2px 2px 2px purple;
 }
 @media screen and (max-width:670px) {
     .list .hide{

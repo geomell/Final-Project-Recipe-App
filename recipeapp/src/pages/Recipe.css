@@ -2,10 +2,14 @@
     margin-top: 2rem;
     margin-bottom: 5rem;
     display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .wrapperRecipe h2 {
     margin-bottom: 2rem;
+    font-style: italic;
+    text-decoration: none;
 }
 
 .information {
@@ -18,17 +22,18 @@
     color: #313131;
     background: white;
     border: 2px solid black;
+    border-radius: 20px;
     margin-right: 2rem;
     font-weight: 600;
     cursor: pointer;
 }
 
 button:active {
-    background: linear-gradient(35deg, #494949, #313131);
+    background: rgb(174, 35, 174);
     color: white;
 }
 button:focus {
-    background: linear-gradient(35deg, #494949, #313131);
+    background: purple;
     color: white;
 }
 

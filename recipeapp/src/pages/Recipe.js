@@ -24,7 +24,7 @@ function Recipe() {
     <div className='wrapperRecipe'>
       <div className='title'>
         <h2>{details.title}</h2>
-        <img src={details.image} alt='' />
+        <img src={details.image} alt={details.title} />
       </div>
       <div className='information'>
         <button className={activeTab === 'instructions' ? 'active' : ''} onClick={()=>setActiveTab('instructions')}>
