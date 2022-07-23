@@ -7,7 +7,7 @@ import styled from "styled-components";
 import {Link} from 'react-router-dom';
 import {GiKnifeFork, GiSpoon} from 'react-icons/gi'
 import {useRef} from 'react';
-
+import Footer from "./components/Footer";
 
 
 
@@ -30,6 +30,7 @@ function App() {
       </Nav>
       <Category />
       <Pages />
+      <Footer />
       </BrowserRouter>
     </div>
     

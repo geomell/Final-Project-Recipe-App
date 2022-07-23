@@ -1,0 +1,24 @@
+.footer {
+    background-color: purple;
+    margin-bottom: -1.3%;
+  width: 100%;
+    text-align: center;
+   padding-top: 0.2rem;
+   padding-bottom: 0.2rem;
+   line-height: 1.3rem;
+   font-size: 1.1rem;
+}
+
+.footer .link  {
+    text-decoration: none;
+    color: black;
+}
+
+.footer a  {
+    text-decoration: none;
+    color: black;
+}
+
+.footer p a {
+    font-style: italic;
+}
