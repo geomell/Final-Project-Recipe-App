@@ -7,11 +7,17 @@ import styled from "styled-components";
 import {Link} from 'react-router-dom';
 import {GiKnifeFork, GiSpoon} from 'react-icons/gi'
 import Footer from "./components/Footer";
+import {Helmet} from "react-helmet";
 
 function App() {
 
   return (
     <div className="App" >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Tasty</title>
+        <meta name="description" content="A recipe app" />
+      </Helmet>
       <BrowserRouter>
         <Nav>
           <GiSpoon />
