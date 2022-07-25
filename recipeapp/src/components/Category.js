@@ -2,8 +2,11 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import '../components/css/Category.css'
 
+
+
 function Category() {
-  return (
+
+    return (
     <div className="line">
       <h2>Recipes from around the world:</h2>
       <div className='list'>
@@ -32,6 +35,7 @@ function Category() {
           <h4>Japanese</h4>
         </SLink>
       </div>
+     
     </div>
   );
 }

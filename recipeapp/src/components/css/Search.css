@@ -15,7 +15,7 @@ form div input {
     border: 2px solid black;
     font-size: 1.5rem;
     color: black;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem 1rem 4.5rem;
     border-radius: 1rem;
     outline: none;
     width: 90%;
@@ -37,37 +37,51 @@ form div svg {
 
 .styling_search {
     margin-left: -0.5rem;
-    width: 1rem;
+    width: 1.3rem;
+    cursor: pointer;
 }
 
 .styling_del {
-    width: 1.3rem;
-   margin-left: 0.5rem;
+    width: 1.8rem;
+   margin-left: 0.7rem;
    cursor: pointer;
 }
 
 @media screen and (max-width:830px) {
     form {
-        margin-left: 5rem;
-        width: 47%;
+        margin-left: 4rem;
+        width: 100%;
     }
     form div input {
         font-size: 1.2rem;
-        padding: 1rem 2rem;
+        padding: 1rem 2rem 1rem 4.2rem;
     }
 }
 
-@media screen and (max-width:830px) {
+@media screen and (max-width:655px) {
     form {
         margin-left: 2rem;
-        width: 51%;
+    }
+}
+
+@media screen and (max-width:510px) {
+    form {
+        margin-left: 0.5rem;
+        width: 100%;
     }
     form div input {
-        font-size: 1rem;
-        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+        padding: 0.8rem 1rem 0.8rem 3.4rem;
     }
     form div input::placeholder {
-        color: black;
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+    .styling_search {
+       width: 1rem;
+    }
+    
+    .styling_del {
+        width: 1.5rem;
+       margin-left: 0.4rem;
     }
 }

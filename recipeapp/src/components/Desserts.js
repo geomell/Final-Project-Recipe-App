@@ -21,7 +21,7 @@ function Desserts() {
       setDessert(JSON.parse(check));
     }else {
       const api= await fetch (
-        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API}&number=9&tags=dessert`);
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API}&number=12&tags=dessert`);
         const data= await api.json();
         localStorage.setItem('dessert', JSON.stringify(data.recipes))
         setDessert (data.recipes);
@@ -33,13 +33,24 @@ function Desserts() {
       <div className="wrapper">
         <h3>Dessert Recipes</h3>
         <Splide options={{
-          perPage: 3,
+          perPage: 4,
           type   : 'loop', 
           rewind: true,
           arrows: true,
           pagination: true,
           drag: 'free',
           gap: '1rem',
+          breakpoints: {
+            1350: {
+              perPage: 3,
+            },
+            850: {
+              perPage: 2,
+            },
+            640: {
+              perPage: 1,
+            },
+          },
         }}>
         {dessert.map((recipe)=> {
           return (

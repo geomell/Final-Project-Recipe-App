@@ -24,23 +24,28 @@ function App() {
         <Pages />
         <Footer />
       </BrowserRouter>
+      
     </div>
   );
 }
 
 const Logo = styled(Link)`
   text-decoration: none;
-  font-size: 1.9rem;
+  font-size: 2.8rem;
   color: pink;
   font-weight: 600;
   padding: 0rem 0.5rem;
 
   @media (max-width :830px) {
-    font-size:1.2rem;
+    font-size:2.5rem;
+  }
+
+  @media (max-width :655px) {
+    font-size:2.2rem;
   }
 
   @media (max-width :510px) {
-    font-size:0.8rem;
+    font-size:1.7rem;
   }
 `;
 
@@ -58,11 +63,18 @@ const Nav = styled.div`
 
   @media (max-width :830px) {
     svg{
-      font-size: 1.5rem;
+      font-size: 4.5rem;
+    }
+
+  @media (max-width :655px) {
+    svg{
+      font-size: 3.5rem;
     }
 
   @media (max-width :510px) {
-      font-size:0.6rem;
+    padding-left: 0.5rem;
+    svg{
+      font-size:3rem;
     }
   }
 `;

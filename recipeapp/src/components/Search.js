@@ -27,11 +27,13 @@ function Search() {
 
     <form onSubmit={submitHandler}>
       <div>
-        <FaSearch  color="white" className='styling_search'/> 
+      <FaSearch  color="white" className='styling_search' onClick={submitHandler}/> 
+        
         <input ref={ref} onChange={(e)=>SetInput(e.target.value)}
         type="text"  placeholder='Enter an ingredient...' value={input}/>
         <TiDeleteOutline color='white' className='styling_del' onClick={handleClick}/>
       </div>
+      
     </form>
   )
 }
