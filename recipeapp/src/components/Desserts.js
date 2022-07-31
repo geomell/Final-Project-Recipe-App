@@ -33,7 +33,7 @@ function Desserts() {
       <div className="wrapper">
         <h3>Dessert Recipes</h3>
         <Splide options={{
-          perPage: 4,
+          perPage: 3,
           type   : 'loop', 
           rewind: true,
           arrows: true,
@@ -41,9 +41,6 @@ function Desserts() {
           drag: 'free',
           gap: '1rem',
           breakpoints: {
-            1350: {
-              perPage: 3,
-            },
             850: {
               perPage: 2,
             },

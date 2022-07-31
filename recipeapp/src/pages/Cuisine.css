@@ -2,9 +2,9 @@
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
-    grid-gap: 3rem;
-    margin-left: 1%;
-    margin-right: 1%;
+    grid-gap: 0.5rem;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .card img {
