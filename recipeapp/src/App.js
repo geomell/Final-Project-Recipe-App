@@ -24,7 +24,7 @@ function App() {
           <Logo to={'/'}  > 
           Tasty </Logo>
           <GiKnifeFork />
-          <Search className='left'/>
+          <Search/>
         </Nav>
         <Category />
         <Pages />

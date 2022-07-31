@@ -10,14 +10,18 @@
 
 .footer .link  {
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: 600;
     letter-spacing: 0.1rem;
 }
 
+.footer p {
+    color: white;
+}
+
 .footer a  {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .footer p a {
